@@ -1,2 +1,3 @@
 1)docker build -t nodeapp:v1 .   // . represent the path of the docker file,-t refer to tag
 
+docker run -d nodeapp:v1   //-d will run the application in background or in detach mode
