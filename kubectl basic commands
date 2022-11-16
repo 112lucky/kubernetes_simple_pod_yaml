@@ -1,3 +1,7 @@
+web app deployment process 
+==============================
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+
 Before starting minikube start docker desktop 
 =================================================
 minikube commands
