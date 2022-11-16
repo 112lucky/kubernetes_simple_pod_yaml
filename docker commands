@@ -1,0 +1,2 @@
+1)docker build -t nodeapp:v1 .   // . represent the path of the docker file,-t refer to tag
+
