@@ -7,7 +7,34 @@ minikube start
 minikube start --vm-driver=hyperkit --v=7 --alsologtostderr
 minikube start --vm-driver=hyperkit
 minikube delete
-minikube add
+minikube addons list
+minikube addons enable ingress
+kubectl get pods -n ingress-nginx    //-n is namespace
+
+
+example
+====================================================================================================================
+=======
+deploy a web application
+=========================
+kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0
+
+expose a web application
+========================
+kubectl expose deployment web --type=NodePort --port=8080
+
+verify the service
+===================
+kubectl get service web
+
+Visit the Service via NodePort:
+===================================
+minikube service web --url
+
+output
+=========
+http://172.17.0.15:31637
+==================================================================================================================
 
 
 install hyperhit and minikube
